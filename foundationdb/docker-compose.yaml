@@ -1,0 +1,16 @@
+services:
+  foundationdb:
+    container_name: foundationdb
+    image: foundationdb/foundationdb:7.3.79
+    restart: unless-stopped
+    entrypoint: ["/usr/bin/tini", "-g", "--", "/var/fdb/scripts/fdb_single.bash"]
+    environment:
+      FDB_NETWORKING_MODE: container
+      FDB_PORT: 4500
+    ports:
+      - "4500:4500"
+    volumes:
+      - data:/var/fdb/data
+
+volumes:
+  data:
