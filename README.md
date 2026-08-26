@@ -1,4 +1,4 @@
-# DockerDev
+# Docker Dev
 
 A collection of Docker Compose files designed for local development. These configurations are tailored for various services and databases, providing a convenient setup for development and testing purposes. **Note:** These files are not intended for production use.
 
